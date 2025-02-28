@@ -1,0 +1,257 @@
+html {
+  line-height: 28px;
+  font-size: 16px; 
+  font-weight: 400;
+  font-family: Arial, sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: green; 
+}
+
+body{
+  background: #ffffff; 
+  min-height: 100vh;
+  color: #000000; 
+}
+
+#site-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-image {
+  position: relative;
+  width: 100%;
+  > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: calc(100% - 8rem);
+  max-width: 1140px;
+  margin: 0 auto;
+
+  /* @include breakpoint-tablet {
+      width: calc(100% - 6rem);
+  }
+
+  @include breakpoint-desktop-small {
+      width: calc(100% - 8rem);
+  } */
+}
+
+.with-padding {
+  padding: 4rem 0;
+  /* @include breakpoint-tablet {
+      padding: 3rem 0;
+  }
+  @include breakpoint-desktop-large{
+      padding: 4em 0;
+  } */
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  margin-top: 110px;
+}
+.hero-image {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.264) 65%, rgba(0, 0, 0, 1) 100%);
+}
+.hero .wrapper {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  height: 100%;
+}
+.hero-content {
+  /* margin-top: auto; */
+  max-width: 644px;
+  margin-bottom: 30px;
+  h1{
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 1;
+  }
+}
+
+header{
+  transition: all 0.2s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 40px 43px;
+  height: 110px;
+  background-color: #ffffff;
+}
+
+header .wrapper{
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    ul{
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    ul>li{
+      text-decoration: none;
+      list-style: none;
+    }
+    a{
+      color: #707070;
+    }
+}
+
+.header-logo{
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  top: 0;
+  display: block;
+  width: 50px;
+  left: 0;
+}
+.destaque {
+  padding: 60px 0;
+  h2{
+    margin-bottom: 24px;
+  }
+}
+
+.destaque .wrapper .images{
+  display: flex;
+  gap: 16px;
+}
+
+.destaque .wrapper .big-image{
+  height: 465px;
+}
+
+.destaque .wrapper .image{
+  height: 230px;
+  width: 444px;
+}
+
+.small-images{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card{
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  min-height: 430px;
+  background: #ffffff;
+  filter: drop-shadow(4px 10px 10px rgba(0, 0, 0, 0.132));
+}
+.card:hover{
+    .card-image img{
+        transform: scale(1.05);
+    }
+}
+
+.card-image{
+  display: block;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 225px;
+  img{
+      transition: all 0.2s ease-in-out;
+  }
+}
+
+.card-text{
+  padding: 22px;
+  p{
+      color: #000000;
+      margin-bottom: 0;
+  }
+}
+.cards{
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 50px;
+}
+
+.price{
+  position: absolute;
+  top: 20px;
+  right: 0;
+  padding: 10px;
+  background-color: #86E6A1;
+  z-index: 1;
+  font-weight: 600;
+}
+
+.btn{
+  padding: 20px 40px;
+  background-color: #86E6A1;
+  font-size: 18px;
+  display: inline-block;
+  font-weight: bold;
+  color: #002A1B;
+}
+.btn-centro{
+  text-align: center;
+  .btn{
+    min-width: 352px;
+  }
+}
+
+.header-image{
+  .hero-content{
+    color: #ffffff;
+  }
+  h2{
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  p{
+    margin-bottom: 20px;
+  }
+}
